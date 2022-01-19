@@ -142,7 +142,6 @@ $('.addButton').on('click', function () {
 });
 // 页面关闭事件
 window.onbeforeunload = function () {
-
     /*
     * localStorage 被删的情况
     * 1、用户手动清除cookie及其他网站数据项，localStorage 被清空
@@ -162,5 +161,8 @@ $(document).on('keypress', function (e) {
         }
     }
 });
+$(".searchForm").on('keypress', function (e) {
+    e.stopPropagation(); // 阻止冒泡,解决输入时候的BUG
+});
 },{}]},{},["epB2"], null)
-//# sourceMappingURL=main.aab75440.map
+//# sourceMappingURL=main.9a3ad31e.map

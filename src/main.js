@@ -55,7 +55,6 @@ $('.addButton')
     });
 // 页面关闭事件
 window.onbeforeunload = () => {
-
     /*
     * localStorage 被删的情况
     * 1、用户手动清除cookie及其他网站数据项，localStorage 被清空
@@ -73,4 +72,7 @@ $(document).on('keypress',(e)=>{
             window.open(hashMap[i].url)
         }
     }
+})
+$(".searchForm").on('keypress',(e)=>{
+    e.stopPropagation() // 阻止冒泡,解决输入时候的BUG
 })
